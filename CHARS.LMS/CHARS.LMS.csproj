@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0898442-830F-4F04-8C55-B1BC3938E3D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CHARS.LMS</RootNamespace>
+    <AssemblyName>CHARS.LMS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CHARS.HR.COMMON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CHARS.HR.COMMON.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Library\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharSpace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharSpace.designer.cs">
+      <DependentUpon>CharSpace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\LstBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\LstBook.Designer.cs">
+      <DependentUpon>LstBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\LstCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\LstCategory.Designer.cs">
+      <DependentUpon>LstCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\LstLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\LstLibrary.Designer.cs">
+      <DependentUpon>LstLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\LstPublisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\LstPublisher.Designer.cs">
+      <DependentUpon>LstPublisher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\LstPublishTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\LstPublishTime.Designer.cs">
+      <DependentUpon>LstPublishTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\LstRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\LstRent.Designer.cs">
+      <DependentUpon>LstRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List\LstWriter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List\LstWriter.Designer.cs">
+      <DependentUpon>LstWriter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Process\proRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process\proRent.Designer.cs">
+      <DependentUpon>proRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CharSpace.resx">
+      <DependentUpon>CharSpace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\LstBook.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LstBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\LstCategory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LstCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\LstLibrary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LstLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\LstPublisher.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LstPublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\LstPublishTime.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LstPublishTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\LstRent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LstRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List\LstWriter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LstWriter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\proRent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>proRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\setBook.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>setBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\SetCategory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\SetLibrary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\SetPublisher.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetPublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\SetPublishTime.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetPublishTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\setRent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>setRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\SetWriter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetWriter.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Setup\setBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\setBook.Designer.cs">
+      <DependentUpon>setBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SetCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\SetCategory.Designer.cs">
+      <DependentUpon>SetCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SetLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\SetLibrary.Designer.cs">
+      <DependentUpon>SetLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SetPublisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\SetPublisher.Designer.cs">
+      <DependentUpon>SetPublisher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SetPublishTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\SetPublishTime.Designer.cs">
+      <DependentUpon>SetPublishTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\setRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\setRent.Designer.cs">
+      <DependentUpon>setRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SetWriter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\SetWriter.Designer.cs">
+      <DependentUpon>SetWriter.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CHARS.LMS.BOL\CHARS.LMS.BOL.csproj">
+      <Project>{7930C872-6A33-48FE-B7F7-DC4B999C6F1F}</Project>
+      <Name>CHARS.LMS.BOL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lib.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\Cri\" />
+    <Folder Include="Report\Crystal\" />
+    <Folder Include="Report\Dataset\" />
+    <Folder Include="SQL\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
