@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace CHARS.LMS
- s   static class Program
+{
+    static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -14,9 +15,6 @@ namespace CHARS.LMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CharSpace());
-            //Thura testing
-
-            //thein 
         }
     }
 }
