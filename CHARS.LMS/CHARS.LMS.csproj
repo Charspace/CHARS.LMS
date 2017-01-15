@@ -253,6 +253,7 @@
     <Folder Include="SQL\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="RefDll\CHARS.HR.BOL.dll" />
     <Content Include="RefDll\CHARS.HR.COMMON.dll" />
     <Content Include="RefDll\System.Windows.Forms.Ribbon.dll" />
   </ItemGroup>
