@@ -14,7 +14,7 @@ namespace CHARS.LMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
-            Application.Run(new CharSpace()); ////bbA
+            Application.Run(new CharSpace()); ////bbA 123
             //thur commit
 
         }
