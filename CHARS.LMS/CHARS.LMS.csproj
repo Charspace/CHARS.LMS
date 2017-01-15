@@ -248,6 +248,10 @@
     <Folder Include="Report\Dataset\" />
     <Folder Include="SQL\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="RefDll\CHARS.HR.COMMON.dll" />
+    <Content Include="RefDll\System.Windows.Forms.Ribbon.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
