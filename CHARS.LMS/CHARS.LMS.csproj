@@ -232,10 +232,18 @@
     <Compile Include="Setup\SetWriter.Designer.cs">
       <DependentUpon>SetWriter.cs</DependentUpon>
     </Compile>
-    <None Include="Res_file\dbConnection.bin" />
-    <None Include="Res_file\LoginUser.bin" />
-    <None Include="Res_file\sysLicense.bin" />
-    <None Include="Res_file\sysOrganizaton.bin" />
+    <Content Include="Res_file\dbConnection.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res_file\LoginUser.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res_file\sysLicense.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res_file\sysOrganizaton.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CHARS.LMS.BOL\CHARS.LMS.BOL.csproj">
