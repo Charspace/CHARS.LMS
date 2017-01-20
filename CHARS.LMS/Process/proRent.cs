@@ -77,5 +77,10 @@ namespace CHARS.LMS.Process
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
