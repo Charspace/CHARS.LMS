@@ -12,6 +12,7 @@ using CHARS.HR.COMMON.BOL;
 using CHARS.HR.COMMON.BOL.SYS;
 using CHARS.LMS.Setup;
 using CHARS.LMS.BOL;
+using CHARS.LMS.Process;
 
 namespace CHARS.LMS.List
 {
@@ -160,7 +161,7 @@ namespace CHARS.LMS.List
                 //setSampledata();
                 //setToolTip();      
 
-                msetRent = new setRent();
+                proRent msetRent = new proRent();
                 msetRent.ShowDialog();
                 if (msetRent.DialogResult == DialogResult.Cancel)
                 {
