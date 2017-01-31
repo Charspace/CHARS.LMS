@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CHARS.LMS.BOL
 {
-    public class RentInfo
+    public class RentStatusInfo
     {
-        public RentInfo()
+        public RentStatusInfo()
         {
             setDefaultValue();
         }
@@ -14,7 +14,7 @@ namespace CHARS.LMS.BOL
         #region "private member"
         private string mAsk;
         private string mTS;
-        private string mUD;                
+        private string mUD;
         #endregion
 
         #region "public member"
@@ -48,41 +48,6 @@ namespace CHARS.LMS.BOL
             set { mDescription = value; }
         }
 
-        private string mBookSyskey;
-        public string BookSyskey
-        {
-            get { return mBookSyskey; }
-            set { mBookSyskey = value; }
-        }
-
-        private string mMemberSyskey;
-        public string MemberSyskey
-        {
-            get { return mMemberSyskey; }
-            set { mMemberSyskey = value; }
-        }
-
-        private int mDuration;
-        public int Duration
-        {
-            get { return mDuration; }
-            set { mDuration = value; }
-        }
-
-        private string mRentDate;
-        public string RentDate
-        {
-            get { return mRentDate; }
-            set { mRentDate = value; }
-        }
-
-        private string mExpireDate;
-        public string ExpireDate
-        {
-            get { return mExpireDate; }
-            set { mExpireDate = value; }
-        }
-
         private string mRentStatus;
         public string RentStatus
         {
@@ -101,18 +66,11 @@ namespace CHARS.LMS.BOL
             mUD = "0";
             mCode = "";
             mDescription = "";
-            mBookSyskey = "0";
-            mMemberSyskey = "0";
-            mDuration = 0;
-            mRentDate = "";
-            mExpireDate = "";
             mRentStatus = "";
-
-            
         }
         #endregion
 
 
-      
-   }
+
+    }
 }

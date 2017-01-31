@@ -140,7 +140,6 @@
       <DependentUpon>LstWriter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Process\proRent.resx">
-      <SubType>Designer</SubType>
       <DependentUpon>proRent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

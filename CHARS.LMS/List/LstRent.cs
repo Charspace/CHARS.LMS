@@ -19,9 +19,9 @@ namespace CHARS.LMS.List
     {
         MasterBLL mMasterBLL = new MasterBLL();
         Utility mUtility = new Utility();
-        RentInfo mRent = new RentInfo();
+        RentHeaderInfo mRent = new RentHeaderInfo();
         Member mMember = new Member();
-        setRent msetRent = new setRent();
+        CHARS.LMS.Process.proRent msetRent = new CHARS.LMS.Process.proRent();
 
         public LstRent()
         {
@@ -37,7 +37,7 @@ namespace CHARS.LMS.List
             try
             {
                 DataTable mm = new DataTable();
-                dgvRent.DataSource = mMasterBLL.selectDataTable("LMS_Tra_Rent", "");
+                dgvRent.DataSource = mMasterBLL.selectDataTable("LMS_Tra_Rent_Header", "");
                 mUtility.setDataGridColumn(ref dgvRent);
                 //dgvRent.Columns[17].Visible = false;
             }
@@ -47,18 +47,10 @@ namespace CHARS.LMS.List
             }
         }
 
-
-        private void loadMember()
-        {
-            cboMemberID.DisplayMember = "Member Code";
-            cboMemberID.ValueMember = "ASK";
-            cboMemberID.DataSource = mMasterBLL.selectDataTable("LMS_Member", "");
-        }
-
         private void loadReference()
         {
           
-            loadMember();
+         
           
 
         }
@@ -68,15 +60,15 @@ namespace CHARS.LMS.List
             try
             {
                 bool valid = true;
-                errorProvider1.Clear();
-                if (cboMemberID.SelectedIndex == -1 || cboMemberID.Text.Trim() == "")
-                {
-                    valid = mUtility.setInvalidComboBox(errorProvider1, cboMemberID);
-                }
-                else
-                {
-                    mUtility.setValidComboBox(errorProvider1, cboMemberID);
-                }
+                //errorProvider1.Clear();
+                //if (cboMemberID.SelectedIndex == -1 || cboMemberID.Text.Trim() == "")
+                //{
+                //    valid = mUtility.setInvalidComboBox(errorProvider1, cboMemberID);
+                //}
+                //else
+                //{
+                //    mUtility.setValidComboBox(errorProvider1, cboMemberID);
+                //}
               
                 return valid;
             }
@@ -103,7 +95,7 @@ namespace CHARS.LMS.List
         {
             try
             {
-                cboMemberID.SelectedValue = mMember.Ask;
+                
                 //txtCode.Text = mBook.Code;
                 //txtDescription.Text = mBook.Description;
                 //cboCategory.SelectedValue = mBook.Category;
@@ -150,17 +142,17 @@ namespace CHARS.LMS.List
         {            
             try
             {
-                txtRentID.Clear();
-                txtRentID.Focus();
-                txtAvailableBook.Clear();
-                txtRemark.Clear();
+                //txtRentID.Clear();
+                //txtRentID.Focus();
+                //txtAvailableBook.Clear();
+                //txtRemark.Clear();
                 //mBook = Book();
                 clearUI();
                 //loadReference();
                 //setSampledata();
                 //setToolTip();      
 
-                msetRent = new setRent();
+                msetRent = new CHARS.LMS.Process.proRent();
                 msetRent.ShowDialog();
                 if (msetRent.DialogResult == DialogResult.Cancel)
                 {
