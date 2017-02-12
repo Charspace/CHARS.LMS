@@ -96,6 +96,10 @@
             // 
             this.toolTipbase.SetToolTip(this.btnClose, "Click to close");
             // 
+            // lblHeader
+            // 
+            this.lblHeader.Click += new System.EventHandler(this.lblHeader_Click);
+            // 
             // cboMember
             // 
             this.cboMember.FormattingEnabled = true;

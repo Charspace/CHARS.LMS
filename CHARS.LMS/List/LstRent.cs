@@ -142,6 +142,7 @@ namespace CHARS.LMS.List
         {            
             try
             {
+                
                 //txtRentID.Clear();
                 //txtRentID.Focus();
                 //txtAvailableBook.Clear();
@@ -151,7 +152,7 @@ namespace CHARS.LMS.List
                 //loadReference();
                 //setSampledata();
                 //setToolTip();      
-
+               
                 msetRent = new CHARS.LMS.Process.proRent();
                 msetRent.ShowDialog();
                 if (msetRent.DialogResult == DialogResult.Cancel)

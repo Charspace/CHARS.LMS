@@ -164,6 +164,53 @@ namespace CHARS.LMS.Process
 
         }
 
+        private void dgvdtpRentDate_CloseUp(object sender, EventArgs e)
+        {
+            dgvdtpRentDate.Visible = false;
+        }
+
+
+        private void dgvdtpRentDate_ValueChanged(object sender, EventArgs e)
+        {
+            dgvRent.CurrentCell.Value = null;
+            dgvRent.CurrentCell.Value = dgvdtpRentDate.Text.ToString();
+        }
+
+        private void dgvdtpExpireDate_CloseUp(object sender, EventArgs e)
+        {
+            dgvdtpExpireDate.Visible = false;
+        }
+
+        private void dgvdtpExpireDate_ValueChanged(object sender, EventArgs e)
+        {
+            dgvRent.CurrentCell.Value = null;
+            dgvRent.CurrentCell.Value = dgvdtpExpireDate.Text.ToString();
+        }
+
+
+        private void dgvdtpReturnDate_CloseUp(object sender, EventArgs e)
+        {
+            dgvdtpReturnDate.Visible = false;
+        }
+
+        private void dgvdtpReturnDate_ValueChanged(object sender, EventArgs e)
+        {
+            dgvRent.CurrentCell.Value = null;
+            dgvRent.CurrentCell.Value = dgvdtpReturnDate.Text.ToString();
+        }
+
+        private void dgvdtpOverDueDate_CloseUp(object sender, EventArgs e)
+        {
+            dgvdtpOverDueDate.Visible = false;
+        }
+
+        private void dgvdtpOverDueDate_ValueChanged(object sender, EventArgs e)
+        {
+            dgvRent.CurrentCell.Value = null;
+            dgvRent.CurrentCell.Value = dgvdtpOverDueDate.Text.ToString();
+        }
+
+
         private void dgvRent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvRent.CurrentRow.Cells[1].Value != null)
@@ -188,11 +235,11 @@ namespace CHARS.LMS.Process
                     // Setting Location  
                     dgvdtpRentDate.Location = new Point(oRectangle.X, oRectangle.Y);
 
-                    //// An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
-                    //dgvdtpRentDate.CloseUp += new EventHandler(oDateTimePicker_CloseUp);
+                    // An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
+                    dgvdtpRentDate.CloseUp += new EventHandler(dgvdtpRentDate_CloseUp);
 
-                    //// An event attached to dateTimePicker Control which is fired when any date is selected  
-                    //dgvdtpRentDate.TextChanged += new EventHandler(dateTimePicker_OnTextChange);
+                    // An event attached to dateTimePicker Control which is fired when any date is selected  
+                    dgvdtpRentDate.TextChanged += new EventHandler(dgvdtpRentDate_ValueChanged);
 
                     // Now make it visible  
                     dgvdtpRentDate.Visible = true;
@@ -217,11 +264,11 @@ namespace CHARS.LMS.Process
                     // Setting Location  
                     dgvdtpExpireDate.Location = new Point(oRectangle.X, oRectangle.Y);
 
-                    //// An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
-                    //dgvdtpRentDate.CloseUp += new EventHandler(oDateTimePicker_CloseUp);
+                    // An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
+                    dgvdtpExpireDate.CloseUp += new EventHandler(dgvdtpExpireDate_CloseUp);
 
-                    //// An event attached to dateTimePicker Control which is fired when any date is selected  
-                    //dgvdtpRentDate.TextChanged += new EventHandler(dateTimePicker_OnTextChange);
+                    // An event attached to dateTimePicker Control which is fired when any date is selected  
+                    dgvdtpExpireDate.TextChanged += new EventHandler(dgvdtpExpireDate_ValueChanged);
 
                     // Now make it visible  
                     dgvdtpExpireDate.Visible = true;
@@ -246,11 +293,11 @@ namespace CHARS.LMS.Process
                     // Setting Location  
                     dgvdtpReturnDate.Location = new Point(oRectangle.X, oRectangle.Y);
 
-                    //// An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
-                    //dgvdtpRentDate.CloseUp += new EventHandler(oDateTimePicker_CloseUp);
+                    // An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
+                    dgvdtpRentDate.CloseUp += new EventHandler(dgvdtpReturnDate_CloseUp);
 
-                    //// An event attached to dateTimePicker Control which is fired when any date is selected  
-                    //dgvdtpRentDate.TextChanged += new EventHandler(dateTimePicker_OnTextChange);
+                    // An event attached to dateTimePicker Control which is fired when any date is selected  
+                    dgvdtpRentDate.TextChanged += new EventHandler(dgvdtpReturnDate_ValueChanged);
 
                     // Now make it visible  
                     dgvdtpReturnDate.Visible = true;
@@ -275,11 +322,11 @@ namespace CHARS.LMS.Process
                     // Setting Location  
                     dgvdtpOverDueDate.Location = new Point(oRectangle.X, oRectangle.Y);
 
-                    //// An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
-                    //dgvdtpRentDate.CloseUp += new EventHandler(oDateTimePicker_CloseUp);
+                    // An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
+                    dgvdtpRentDate.CloseUp += new EventHandler(dgvdtpOverDueDate_CloseUp);
 
-                    //// An event attached to dateTimePicker Control which is fired when any date is selected  
-                    //dgvdtpRentDate.TextChanged += new EventHandler(dateTimePicker_OnTextChange);
+                    // An event attached to dateTimePicker Control which is fired when any date is selected  
+                    dgvdtpRentDate.TextChanged += new EventHandler(dgvdtpOverDueDate_ValueChanged);
 
                     // Now make it visible  
                     dgvdtpOverDueDate.Visible = true;
@@ -307,6 +354,12 @@ namespace CHARS.LMS.Process
             if (dgvRent.CurrentCell == dgvRent.CurrentRow.Cells[1])
             {
                 loadCategory();
+                dgvRent.CurrentRow.Cells["RentDate"].Value = DateTime.Now.ToShortDateString();
+                dgvRent.CurrentRow.Cells["ExpireDate"].Value = DateTime.Now.ToShortDateString();
+                dgvRent.CurrentRow.Cells["ReturnDate"].Value = DateTime.Now.ToShortDateString();
+                dgvRent.CurrentRow.Cells["OverDueDate"].Value = DateTime.Now.ToShortDateString();
+
+
             }
         }
 
@@ -410,6 +463,9 @@ namespace CHARS.LMS.Process
             }
         }
 
-         
+        private void lblHeader_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
