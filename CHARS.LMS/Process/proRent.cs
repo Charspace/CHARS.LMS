@@ -197,20 +197,7 @@ namespace CHARS.LMS.Process
         {
             dgvRent.CurrentCell.Value = null;
             dgvRent.CurrentCell.Value = dgvdtpReturnDate.Text.ToString();
-        }
-
-        private void dgvdtpOverDueDate_CloseUp(object sender, EventArgs e)
-        {
-            dgvdtpOverDueDate.Visible = false;
-        }
-
-        private void dgvdtpOverDueDate_ValueChanged(object sender, EventArgs e)
-        {
-            dgvRent.CurrentCell.Value = null;
-            dgvRent.CurrentCell.Value = dgvdtpOverDueDate.Text.ToString();
-        }
-
-
+        }      
         private void dgvRent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvRent.CurrentRow.Cells[1].Value != null)
@@ -302,35 +289,7 @@ namespace CHARS.LMS.Process
                     // Now make it visible  
                     dgvdtpReturnDate.Visible = true;
                 }
-                else if (dgvRent.CurrentCell.OwningColumn == dgvRent.Columns["OverDueDate"])
-                {
-                    //Initialized a new DateTimePicker Control  
-                    dgvdtpOverDueDate = new DateTimePicker();
-
-                    //Adding DateTimePicker control into DataGridView   
-                    dgvRent.Controls.Add(dgvdtpOverDueDate);
-
-                    // Setting the format (i.e. 2014-10-10)  
-                    dgvdtpOverDueDate.Format = DateTimePickerFormat.Short;
-
-                    // It returns the retangular area that represents the Display area for a cell  
-                    Rectangle oRectangle = dgvRent.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
-
-                    //Setting area for DateTimePicker Control  
-                    dgvdtpOverDueDate.Size = new Size(oRectangle.Width, oRectangle.Height);
-
-                    // Setting Location  
-                    dgvdtpOverDueDate.Location = new Point(oRectangle.X, oRectangle.Y);
-
-                    // An event attached to dateTimePicker Control which is fired when DateTimeControl is closed  
-                    dgvdtpRentDate.CloseUp += new EventHandler(dgvdtpOverDueDate_CloseUp);
-
-                    // An event attached to dateTimePicker Control which is fired when any date is selected  
-                    dgvdtpRentDate.TextChanged += new EventHandler(dgvdtpOverDueDate_ValueChanged);
-
-                    // Now make it visible  
-                    dgvdtpOverDueDate.Visible = true;
-                }
+                
             }
         }
 
@@ -467,5 +426,15 @@ namespace CHARS.LMS.Process
         {
 
         }
+
+        private void dgvRent_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvRent.CurrentCell == dgvRent.CurrentRow.Cells[1])
+            {
+                
+            }
+        }
+
+        
     }
 }

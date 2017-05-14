@@ -209,6 +209,7 @@
             this.dgvRent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRent_CellClick);
             this.dgvRent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRent_CellContentClick);
             this.dgvRent.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRent_CellEndEdit);
+            this.dgvRent.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRent_CellEnter);
             this.dgvRent.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRent_CellLeave);
             this.dgvRent.ColumnDividerWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvRent_ColumnDividerWidthChanged);
             this.dgvRent.ColumnHeaderCellChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvRent_ColumnHeaderCellChanged);
